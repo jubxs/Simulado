@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -14,31 +15,10 @@ public class Main {
         System.out.println("4 - Área do conhecimento");
         System.out.println("Digite os números correspondentes aos critérios desejados, caso deseje todos digite: T ");
         String criterios = in.nextLine();
-
-        Map<String,Object[]>mapa = new HashMap<String,Object[]>();
-        String[] Area = {"Linguagens","Humanas","Exatas","Natureza"};
-        String[] Materia = {"Estudos linguisticos, Interpretação"};
-
-        Object[] clasificacao = {Area,Materia};
-        mapa.put("Questão 1",clasificacao);
-        Object[] recDados = mapa.get("Questão 1");
-        for (int i = 0; i < recDados.length; i++){
-            switch (i){
-                case 0:
-                    System.out.println("Area: ");
-                    break;
-                case 1:
-                    System.out.println("Materia: ");
-                    break;}
-            for (String s : (String[])recDados[i]){
-                System.out.println(s);
-            }
-            System.out.println();
-        }
-
-
-
-
+        System.out.println("Questão errada ou acertada");
+        ArrayList<Integer> Qerrada = new ArrayList<Integer>();
+        System.out.println("Eradda,digite 1 ou Certa, digite 2");
+        int qerradaouceta = in.nextInt();
         in.nextLine();
         if (criterios.equals("T")) {
             System.out.println("A questão foi: ");
