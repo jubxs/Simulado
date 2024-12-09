@@ -57,6 +57,8 @@ public class Main {
 
         }
          if (criterio4){
+             for (int a =0; a<Questoes;a++){
+                 System.out.println("QUESTÃO" + (a+1));
              System.out.println("A questão é de qual área do conhecimento:");
              System.out.println("Digite 1 -> Linguagens");
              System.out.println("Digite 2 -> Humanas");
@@ -71,12 +73,12 @@ public class Main {
          }
 
         if (criterio1){System.out.println("Questões"+ Tqerrada+"/"+Questoes);}
-        if (criterio2){
+        if (criterio4){
             System.out.println("Questões de Linguagens:"+ (TqLINGUAGENS - TqELINGUAGENS) +"/"+ TqLINGUAGENS);
             System.out.println("Questões de Humanas:"+ (TqHUMANAS - TqEHUMANAS) +"/"+ TqHUMANAS);
             System.out.println("Questões de Natureza:"+ (TqNATUREZA - TqENATUREZA) +"/"+ TqNATUREZA);
             System.out.println("Questões de Exatas"+ (TqEXATAS - TqEEXATAS) + "/"+ TqEXATAS);
         }
 
-    }
+    }}
 }
