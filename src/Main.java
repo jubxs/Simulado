@@ -1,11 +1,14 @@
-import java.util.Map;
-import java.util.HashMap;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Quantidade de questões:");
-        int Questoes = in.nextInt();
+
+        boolean criterio1 = false;
+        boolean criterio2 = false;
+        boolean criterio3 = false;
+        boolean criterio4 = false;
+
         System.out.println("Quais critérios você gostaria de usar?");
         System.out.println("Opções:");
         System.out.println("1 - Questão errada ou acertada");
@@ -14,46 +17,25 @@ public class Main {
         System.out.println("4 - Área do conhecimento");
         System.out.println("Digite os números correspondentes aos critérios desejados, caso deseje todos digite: T ");
         String criterios = in.nextLine();
+        String[] s = criterios.split(" ");
 
-        Map<String,Object[]>mapa = new HashMap<String,Object[]>();
-        String[] Area = {"Linguagens","Humanas","Exatas","Natureza"};
-        String[] Materia = {"Estudos linguisticos, Interpretação"};
-
-        Object[] clasificacao = {Area,Materia};
-        mapa.put("Questão 1",clasificacao);
-        Object[] recDados = mapa.get("Questão 1");
-        for (int i = 0; i < recDados.length; i++){
-            switch (i){
-                case 0:
-                    System.out.println("Area: ");
-                    break;
-                case 1:
-                    System.out.println("Materia: ");
-                    break;}
-            for (String s : (String[])recDados[i]){
-                System.out.println(s);
+        if (criterios.equalsIgnoreCase("T")) {
+            criterio1 = true;
+            criterio2 = true;
+            criterio3 = true;
+            criterio4 = true;
+        } else {
+            for (int l = 0; l < s.length; l++) {
+                if (s[l].equals("1")) { criterio1 = true; }
+                if (s[l].equals("2")) { criterio2 = true; }
+                if (s[l].equals("3")) { criterio3 = true; }
+                if (s[l].equals("4")) { criterio4 = true; }
             }
-            System.out.println();
         }
 
-
-
-
-        in.nextLine();
-        if (criterios.equals("T")) {
-            System.out.println("A questão foi: ");
-            System.out.println("Errada, digite 1");
-            System.out.println("Acertada, digite 2");
-            int CE = in.nextInt();
-            if (CE == 1){
-
-
-
-        }
-
-    }
-
-
-
+        if (criterio1) { System.out.println("Apresentar questões erradas ou certas no geral"); }
+        if (criterio2) { System.out.println("Apresentar o motivo do erro das questões erradas"); }
+        if (criterio4) { System.out.println("Apresentar questões erradas ou certas de cada área"); }
+        if (criterio3) { System.out.println("Apresentar o assunto das questões"); }
     }
 }
