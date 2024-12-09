@@ -14,15 +14,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.println("Quantidade de questões:");
         int Questoes = in.nextInt();
-        System.out.println("Quais critérios você gostaria de usar?");
-        System.out.println("Opções:");
-        System.out.println("1 - Questão errada ou acertada");
-        System.out.println("2 - Motivo do erro ou acerto");
-        System.out.println("3 - Matéria");
-        System.out.println("4 - Área do conhecimento");
-        System.out.println("Digite os números correspondentes aos critérios desejados, caso deseje todos digite: T ");
-        String criterios = in.nextLine();
-
 
 
         for(int i=0; i<Questoes;i++){
@@ -43,14 +34,14 @@ public class Main {
             if (areadaquestao == 1){TqLINGUAGENS +=1; if (qerradaouceta ==1){TqELINGUAGENS += 1;}}
             if (areadaquestao == 2){TqHUMANAS +=1; if (qerradaouceta ==1){TqEHUMANAS +=1;}}
             if (areadaquestao == 3){TqEXATAS +=1; if (qerradaouceta ==1){TqEEXATAS +=1;}}
-            if (areadaquestao == 4){TqNATUREZA +=1; if (qerradaouceta ==1){TqEEXATAS +=1;}}
+            if (areadaquestao == 4){TqNATUREZA +=1; if (qerradaouceta ==1){TqENATUREZA +=1;}}
         }
 
                System.out.println("Questões"+ Tqerrada+"/"+Questoes);
                System.out.println("Questões de Linguagens:"+ (TqLINGUAGENS - TqELINGUAGENS) +"/"+ TqLINGUAGENS);
                System.out.println("Questões de Humanas:"+ (TqHUMANAS - TqEHUMANAS) +"/"+ TqHUMANAS);
                System.out.println("Questões de Natureza:"+ (TqNATUREZA - TqENATUREZA) +"/"+ TqNATUREZA);
-               System.out.println("Questões de Exatas"+ (TqEXATAS - TqEEXATAS) +"/"+ TqEEXATAS);
+               System.out.println("Questões de Exatas"+ (TqEXATAS - TqEEXATAS) + "/"+ TqEXATAS);
 
         }
 
