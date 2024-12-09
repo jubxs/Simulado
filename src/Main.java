@@ -2,24 +2,14 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        boolean criterio1 = false;
-        boolean criterio2 = false;
-        boolean criterio3 = false;
-        boolean criterio4 = false;
-        int Tqerrada = 0;
-        int qerradaouceta = 0;
-        int areadaquestao = 0;
-        int TqLINGUAGENS = 0;
-        int TqHUMANAS = 0;
-        int TqEXATAS = 0;
-        int TqNATUREZA = 0;
-        int TqELINGUAGENS = 0;
-        int TqEHUMANAS = 0;
-        int TqEEXATAS = 0;
-        int TqENATUREZA = 0;
+        boolean criterio1 = false; boolean criterio2 = false;boolean criterio3 = false;boolean criterio4 = false;
+        int Tqerrada = 0;int qerradaouceta = 0;int areadaquestao = 0;
+        int TqLINGUAGENS = 0;int TqHUMANAS = 0;int TqEXATAS = 0;int TqNATUREZA = 0;
+        int TqELINGUAGENS = 0;int TqEHUMANAS = 0;int TqEEXATAS = 0;int TqENATUREZA = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("Quantidade de questões:");
         int Questoes = in.nextInt();
+        in.nextLine();
         System.out.println("Quais critérios você gostaria de usar?");
         System.out.println("Opções:");
         System.out.println("1 - Questão errada ou acertada");
@@ -59,6 +49,9 @@ public class Main {
                  ArrayList<Integer> Qerrada = new ArrayList<Integer>();
                 System.out.println("Eradda,digite 1 ou Certa, digite 2");
                 qerradaouceta = in.nextInt();
+                 if (qerradaouceta == 1){
+                     Tqerrada +=1;}
+                 System.out.println(" ");
             }
 
 
