@@ -1,8 +1,22 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        boolean criterio1 = false;boolean criterio2 = false;boolean criterio3 = false;boolean criterio4 = false;
-
+        boolean criterio1 = false;
+        boolean criterio2 = false;
+        boolean criterio3 = false;
+        boolean criterio4 = false;
+        int Tqerrada = 0;
+        int qerradaouceta = 0;
+        int areadaquestao = 0;
+        int TqLINGUAGENS = 0;
+        int TqHUMANAS = 0;
+        int TqEXATAS = 0;
+        int TqNATUREZA = 0;
+        int TqELINGUAGENS = 0;
+        int TqEHUMANAS = 0;
+        int TqEEXATAS = 0;
+        int TqENATUREZA = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("Quantidade de questões:");
         int Questoes = in.nextInt();
@@ -23,15 +37,35 @@ public class Main {
             criterio4 = true;
         } else {
             for (int l = 0; l < s.length; l++) {
-                if (s[l].equals("1")) { criterio1 = true; }
-                if (s[l].equals("2")) { criterio2 = true; }
-                if (s[l].equals("3")) { criterio3 = true; }
-                if (s[l].equals("4")) { criterio4 = true; }
+                if (s[l].equals("1")) {
+                    criterio1 = true;
+                }
+                if (s[l].equals("2")) {
+                    criterio2 = true;
+                }
+                if (s[l].equals("3")) {
+                    criterio3 = true;
+                }
+                if (s[l].equals("4")) {
+                    criterio4 = true;
+                }
             }
         }
 
+         if (criterio1) {
+             for (int i = 0; i < Questoes; i++) {
+                 System.out.println("Questão" + (i + 1));
+                 System.out.println("Questão errada ou acertada");
+                 ArrayList<Integer> Qerrada = new ArrayList<Integer>();
+                System.out.println("Eradda,digite 1 ou Certa, digite 2");
+                qerradaouceta = in.nextInt();
+            }
 
 
+        }
+         if (criterio4){
 
+         }
+        System.out.println("Questões"+ Tqerrada+"/"+Questoes);
     }
 }
