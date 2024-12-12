@@ -55,9 +55,27 @@ public class Main {
                      Tqerrada +=1;}
                  System.out.println(" ");
                  if (criterio2){
+                     if (qerradaouceta == 1){
+                         System.out.println("Qual o motivo do erro?");
+                         System.out.println("Não sabia, digite 1");
+                         System.out.println("Chutou, digite 2");
+                         System.out.println("Ficou em dúvida, digite 3");
+                         motivodoerro = in.nextInt();
+                         if (motivodoerro == 1){Tnsabia +=1;}
+                         if (motivodoerro == 2){Tchutou +=1;}
+                         if (motivodoerro == 3){Tduvida +=1;}
+                     }if (qerradaouceta==2){
+                         System.out.println("Qual o motivo do acerto?");
+                         System.out.println("Sabia, digite 1");
+                         System.out.println("Chutou, digite 2");
+                         System.out.println("Ficou em dúvida, digite 3");
+                         motivodoacerto = in.nextInt();
+                         if (motivodoacerto == 1){TAsabia +=1;}
+                         if (motivodoacerto == 2){TAchutou +=1;}
+                         if (motivodoacerto == 3){TAduvida +=1;}
+                     }
 
-                 }
-                 if(criterio4){
+                 } if(criterio4){
                      System.out.println("A questão é de qual área do conhecimento:");
                      System.out.println("Digite 1 -> Linguagens");
                      System.out.println("Digite 2 -> Humanas");
@@ -91,6 +109,10 @@ public class Main {
          }}
 
         if (criterio1){System.out.println("Questões"+ (Questoes - Tqerrada)+"/"+Questoes);}
+        if (criterio2){
+            System.out.println("Questões acertadas" + (Questoes - Tqerrada)+"/"+Questoes);
+
+        }
         if (criterio4){
             System.out.println("Questões de Linguagens:"+ (TqLINGUAGENS - TqELINGUAGENS) +"/"+ TqLINGUAGENS);
             System.out.println("Questões de Humanas:"+ (TqHUMANAS - TqEHUMANAS) +"/"+ TqHUMANAS);
