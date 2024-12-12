@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         int qerradaouceta =0;
-        int motivodoerro = 0; int nsabia = 0; int chutou = 0; int duvida = 0;int Tnsabia = 0; int Tchutou = 0; int Tduvida = 0;
-        int motivodoacerto = 0; int Asabia = 0; int Achutou = 0; int Aduvida = 0;int TAsabia = 0; int TAchutou = 0; int TAduvida = 0;
+        int motivodoerro = 0;int Tnsabia = 0; int Tchutou = 0; int Tduvida = 0;
+        int motivodoacerto = 0;int TAsabia = 0; int TAchutou = 0; int TAduvida = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("Quantidade de questões:");
         int Questoes = in.nextInt();
