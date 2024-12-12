@@ -6,6 +6,8 @@ public class Main {
         int Tqerrada = 0;int qerradaouceta = 0;int areadaquestao = 0;
         int TqLINGUAGENS = 0;int TqHUMANAS = 0;int TqEXATAS = 0;int TqNATUREZA = 0;
         int TqELINGUAGENS = 0;int TqEHUMANAS = 0;int TqEEXATAS = 0;int TqENATUREZA = 0;
+        int motivodoerro = 0;int Tnsabia = 0; int Tchutou = 0; int Tduvida = 0;
+        int motivodoacerto = 0;int TAsabia = 0; int TAchutou = 0; int TAduvida = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("Quantidade de questões:");
         int Questoes = in.nextInt();
@@ -52,6 +54,9 @@ public class Main {
                  if (qerradaouceta == 1){
                      Tqerrada +=1;}
                  System.out.println(" ");
+                 if (criterio2){
+
+                 }
                  if(criterio4){
                      System.out.println("A questão é de qual área do conhecimento:");
                      System.out.println("Digite 1 -> Linguagens");
