@@ -47,7 +47,7 @@ public class Main {
         System.out.println(" Química" + quim);
         System.out.println(" Física" + fis);
         System.out.println(" Matemática" + mat);
-        System.out.println(" ");
+        System.out.println("  ");
 
     }
 }
