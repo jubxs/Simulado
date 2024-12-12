@@ -19,6 +19,7 @@ public class Main {
         System.out.println("3 - Matéria");
         System.out.println("4 - Área do conhecimento");
         System.out.println("Digite os números correspondentes aos critérios desejados, caso deseje todos digite: T ");
+        System.out.println("Caso deseje o critério 2, obrigatoriamente você deve informar o criterio 1");
         String criterios = in.nextLine();
         String[] s = criterios.split(" ");
 
@@ -111,6 +112,13 @@ public class Main {
         if (criterio1){System.out.println("Questões"+ (Questoes - Tqerrada)+"/"+Questoes);}
         if (criterio2){
             System.out.println("Questões acertadas" + (Questoes - Tqerrada)+"/"+Questoes);
+            System.out.println("  Questões que sabia:"+TAsabia + "/"+Questoes);
+            System.out.println("  Questões que chutou e acertou:"+TAchutou+ "/"+Questoes);
+            System.out.println("  Questões que teve dúvida e acertou:"+TAduvida + "/"+Questoes);
+            System.out.println("Questões erradas" + Tqerrada+"/"+Questoes);
+            System.out.println(" Questões que não sabia:"+Tnsabia + "/"+Questoes);
+            System.out.println(" Questões que não chutou e errou:"+Tchutou + "/"+Questoes);
+            System.out.println(" Questões que não sabia:"+Tduvida + "/"+Questoes);
 
         }
         if (criterio4){
