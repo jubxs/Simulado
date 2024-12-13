@@ -8,6 +8,15 @@ public class Main {
         int TqELINGUAGENS = 0;int TqEHUMANAS = 0;int TqEEXATAS = 0;int TqENATUREZA = 0;
         int motivodoerro = 0;int Tnsabia = 0; int Tchutou = 0; int Tduvida = 0;
         int motivodoacerto = 0;int TAsabia = 0; int TAchutou = 0; int TAduvida = 0;
+        int materia;int TAhist = 0;int TAgeo = 0;int TAfilo = 0;int TAsocio = 0;
+        int TAgram = 0;int TAinter = 0;int TAreda = 0;
+        int TAbio = 0;int TAquim = 0;int TAfis = 0;int TAmat = 0;
+        int TEhist = 0;int TEgeo = 0;int TEfilo = 0;int TEsocio = 0;
+        int TEgram = 0;int TEinter = 0;int TEreda = 0;
+        int TEbio = 0;int TEquim = 0;int TEfis = 0;int TEmat = 0;
+        int hist = 0;int geo = 0;int filo = 0;int socio = 0;
+        int gram = 0;int inter = 0;int reda = 0;
+        int bio = 0;int quim = 0;int fis = 0;int mat = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("Quantidade de questões:");
         int Questoes = in.nextInt();
@@ -52,6 +61,7 @@ public class Main {
                  ArrayList<Integer> Qerrada = new ArrayList<Integer>();
                 System.out.println("Eradda,digite 1 ou Certa, digite 2");
                 qerradaouceta = in.nextInt();
+                 in.nextLine();
                  if (qerradaouceta == 1){
                      Tqerrada +=1;}
                  System.out.println(" ");
@@ -62,6 +72,7 @@ public class Main {
                          System.out.println("Chutou, digite 2");
                          System.out.println("Ficou em dúvida, digite 3");
                          motivodoerro = in.nextInt();
+                         in.nextLine();
                          if (motivodoerro == 1){Tnsabia +=1;}
                          if (motivodoerro == 2){Tchutou +=1;}
                          if (motivodoerro == 3){Tduvida +=1;}
@@ -71,6 +82,7 @@ public class Main {
                          System.out.println("Chutou, digite 2");
                          System.out.println("Ficou em dúvida, digite 3");
                          motivodoacerto = in.nextInt();
+                         in.nextLine();
                          if (motivodoacerto == 1){TAsabia +=1;}
                          if (motivodoacerto == 2){TAchutou +=1;}
                          if (motivodoacerto == 3){TAduvida +=1;}
@@ -83,10 +95,55 @@ public class Main {
                      System.out.println("Digite 3 -> Exatas");
                      System.out.println("Digite 4 -> Natureza");
                      areadaquestao = in.nextInt();
-                     if (areadaquestao == 1){TqLINGUAGENS +=1; if (qerradaouceta ==1){TqELINGUAGENS += 1;}}
-                     if (areadaquestao == 2){TqHUMANAS +=1; if (qerradaouceta ==1){TqEHUMANAS +=1;}}
-                     if (areadaquestao == 3){TqEXATAS +=1; if (qerradaouceta ==1){TqEEXATAS +=1;}}
-                     if (areadaquestao == 4){TqNATUREZA +=1; if (qerradaouceta ==1){TqENATUREZA +=1;}}
+                     in.nextLine();
+                     if (areadaquestao == 1){
+                         TqLINGUAGENS +=1;
+                         if (qerradaouceta ==1){TqELINGUAGENS += 1;}
+                         if (criterio3){
+                                 System.out.println("Qual é a matéria da questão");
+                                 System.out.println("1 - Gramática");
+                                 System.out.println("2 - Interpretação");
+                                 System.out.println("3 - Redação");
+                                 materia = in.nextInt();
+                             in.nextLine();
+                                 if (materia == 1) {gram += 1;}if (materia == 2) {inter += 1;}if (materia == 3) {reda += 1;}
+                         }}
+
+                     if (areadaquestao == 2){
+                         TqHUMANAS +=1;
+                         if (qerradaouceta ==1){TqEHUMANAS +=1;}
+                         if (criterio3){
+                                 System.out.println("4 - História");
+                                 System.out.println("5 - Geografia");
+                                 System.out.println("6 - Filosofia");
+                                 System.out.println("7 - Sociologia");
+                                 materia = in.nextInt();
+                             in.nextLine();
+                                 if (materia == 4) {hist += 1;}if (materia == 5) {geo += 1;}if (materia == 6) {filo += 1;}if (materia == 7) {socio += 1;}
+                         }}
+                     if (areadaquestao == 3){
+                         TqEXATAS +=1;
+                         if (qerradaouceta ==1){TqEEXATAS +=1;}
+                         if (criterio3){
+                             System.out.println("Qual é a matéria da questão");
+                                 System.out.println("11- Matemática");
+                                 materia = in.nextInt();
+                                  in.nextLine();
+                                 if (materia == 11) {mat += 1;}
+                         }}
+                     if (areadaquestao == 4){
+                         TqNATUREZA +=1;
+                         if (qerradaouceta ==1){TqENATUREZA +=1;}
+                         if (criterio3){
+                                 System.out.println("Qual é a matéria da questão");
+                                 System.out.println("8 - Biologia");
+                                 System.out.println("9 - Química");
+                                 System.out.println("10 - Física");
+                                 materia = in.nextInt();
+                             in.nextLine();
+                                 if (materia == 8) {bio += 1;}if (materia == 9) {quim += 1;}if (materia == 10) {fis += 1;}
+                         }}
+
                  }
 
             }
@@ -102,12 +159,38 @@ public class Main {
              System.out.println("Digite 3 -> Exatas");
              System.out.println("Digite 4 -> Natureza");
              areadaquestao = in.nextInt();
+                 in.nextLine();
              if (areadaquestao == 1){TqLINGUAGENS +=1; if (qerradaouceta ==1){TqELINGUAGENS += 1;}}
              if (areadaquestao == 2){TqHUMANAS +=1; if (qerradaouceta ==1){TqEHUMANAS +=1;}}
              if (areadaquestao == 3){TqEXATAS +=1; if (qerradaouceta ==1){TqEEXATAS +=1;}}
              if (areadaquestao == 4){TqNATUREZA +=1; if (qerradaouceta ==1){TqENATUREZA +=1;}}
 
          }}
+         if (criterio3 && !criterio1){
+            for (int m = 0; m < Questoes; m++) {
+                System.out.println("QUESTÃO" + (m+1));
+                System.out.println("Qual é a matéria da questão");
+                System.out.println("1 - Gramática");
+                System.out.println("2 - Interpretação");
+                System.out.println("3 - Redação");
+
+                System.out.println("4 - História");
+                System.out.println("5 - Geografia");
+                System.out.println("6 - Filosofia");
+                System.out.println("7 - Sociologia");
+
+                System.out.println("8 - Biologia");
+                System.out.println("9 - Química");
+                System.out.println("10 - Física");
+
+                System.out.println("11- Matemática");
+                materia = in.nextInt();
+                if (materia == 1) {gram += 1;}if (materia == 2) {inter += 1;}if (materia == 3) {reda += 1;}
+                if (materia == 4) {hist += 1;}if (materia == 5) {geo += 1;}if (materia == 6) {filo += 1;}if (materia == 7) {socio += 1;}
+                if (materia == 8) {bio += 1;}if (materia == 9) {quim += 1;}if (materia == 10) {fis += 1;}
+                if (materia == 11) {mat += 1;}
+            }
+        }
 
         if (criterio1){System.out.println("Questões"+ (Questoes - Tqerrada)+"/"+Questoes);}
         if (criterio2){
@@ -126,6 +209,42 @@ public class Main {
             System.out.println("Questões de Humanas:"+ (TqHUMANAS - TqEHUMANAS) +"/"+ TqHUMANAS);
             System.out.println("Questões de Natureza:"+ (TqNATUREZA - TqENATUREZA) +"/"+ TqNATUREZA);
             System.out.println("Questões de Exatas"+ (TqEXATAS - TqEEXATAS) + "/"+ TqEXATAS);
+        }
+
+        if (criterio3 && !criterio1){
+            System.out.println(" ");
+            System.out.println(" Interpretação" + inter);
+            System.out.println(" Gramática:" + gram);
+            System.out.println(" Redação" + reda);
+            System.out.println(" ");
+            System.out.println(" Geografia:" + geo);
+            System.out.println(" História:" + hist);
+            System.out.println(" Filosofia" + filo);
+            System.out.println(" Sociologia" + socio);
+            System.out.println(" ");
+            System.out.println(" Biologia" + bio);
+            System.out.println(" Química" + quim);
+            System.out.println(" Física" + fis);
+            System.out.println(" Matemática" + mat);
+            System.out.println("  ");
+        }
+
+        if (criterio3){
+            System.out.println("   Por matéria:");
+            System.out.println("    Interpretação:" + inter);
+            System.out.println(" Gramática:" + gram);
+            System.out.println(" Redação" + reda);
+            System.out.println(" ");
+            System.out.println(" Geografia:" + geo);
+            System.out.println(" História:" + hist);
+            System.out.println(" Filosofia" + filo);
+            System.out.println(" Sociologia" + socio);
+            System.out.println(" ");
+            System.out.println(" Biologia" + bio);
+            System.out.println(" Química" + quim);
+            System.out.println(" Física" + fis);
+            System.out.println(" Matemática" + mat);
+            System.out.println("  ");
         }
 
     }
