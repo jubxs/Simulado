@@ -8,9 +8,7 @@ public class Main {
         int TqELINGUAGENS = 0;int TqEHUMANAS = 0;int TqEEXATAS = 0;int TqENATUREZA = 0;
         int motivodoerro = 0;int Tnsabia = 0; int Tchutou = 0; int Tduvida = 0;
         int motivodoacerto = 0;int TAsabia = 0; int TAchutou = 0; int TAduvida = 0;
-        int materia;int TAhist = 0;int TAgeo = 0;int TAfilo = 0;int TAsocio = 0;
-        int TAgram = 0;int TAinter = 0;int TAreda = 0;
-        int TAbio = 0;int TAquim = 0;int TAfis = 0;int TAmat = 0;
+        int materia;
         int TEhist = 0;int TEgeo = 0;int TEfilo = 0;int TEsocio = 0;
         int TEgram = 0;int TEinter = 0;int TEreda = 0;
         int TEbio = 0;int TEquim = 0;int TEfis = 0;int TEmat = 0;
