@@ -106,7 +106,9 @@ public class Main {
                                  System.out.println("3 - Redação");
                                  materia = in.nextInt();
                              in.nextLine();
-                                 if (materia == 1) {gram += 1;}if (materia == 2) {inter += 1;}if (materia == 3) {reda += 1;}
+                                 if (materia == 1) {gram += 1;if (qerradaouceta==1){TEgram += 1;}}
+                                 if (materia == 2) {inter += 1;if (qerradaouceta==1){TEinter += 1;}}
+                                 if (materia == 3) {reda += 1;if (qerradaouceta==1){TEreda +=1;}
                          }}
 
                      if (areadaquestao == 2){
@@ -119,7 +121,7 @@ public class Main {
                                  System.out.println("7 - Sociologia");
                                  materia = in.nextInt();
                              in.nextLine();
-                                 if (materia == 4) {hist += 1;}if (materia == 5) {geo += 1;}if (materia == 6) {filo += 1;}if (materia == 7) {socio += 1;}
+                                 if (materia == 4) {hist += 1;if (qerradaouceta==1){TEhist += 1;}}if (materia == 5) {geo += 1;if (qerradaouceta==1){TEgeo += 1;}}if (materia == 6) {filo += 1;if (qerradaouceta==1){TEfilo += 1;}}if (materia == 7) {socio += 1;if (qerradaouceta==1){TEsocio += 1;}}
                          }}
                      if (areadaquestao == 3){
                          TqEXATAS +=1;
@@ -129,7 +131,7 @@ public class Main {
                                  System.out.println("11- Matemática");
                                  materia = in.nextInt();
                                   in.nextLine();
-                                 if (materia == 11) {mat += 1;}
+                                 if (materia == 11) {mat += 1;if (qerradaouceta==1){TEmat += 1;}}
                          }}
                      if (areadaquestao == 4){
                          TqNATUREZA +=1;
@@ -141,15 +143,12 @@ public class Main {
                                  System.out.println("10 - Física");
                                  materia = in.nextInt();
                              in.nextLine();
-                                 if (materia == 8) {bio += 1;}if (materia == 9) {quim += 1;}if (materia == 10) {fis += 1;}
+                                 if (materia == 8) {bio += 1;if (qerradaouceta==1){TEbio += 1;}}if (materia == 9) {quim += 1;if (qerradaouceta==1){TEquim += 1;}}if (materia == 10) {fis += 1;if (qerradaouceta==1){TEfis += 1;}}
                          }}
 
                  }
 
-            }
-
-
-        }
+            }}
          if (criterio4 && !criterio1){
              for (int a =0; a<Questoes;a++){
                  System.out.println("QUESTÃO" + (a+1));
@@ -231,21 +230,22 @@ public class Main {
 
         if (criterio3){
             System.out.println("   Por matéria:");
-            System.out.println("    Interpretação:" + inter);
-            System.out.println(" Gramática:" + gram);
-            System.out.println(" Redação" + reda);
+            System.out.println("    Interpretação:" + (inter - TEinter )+ "/"+inter);
+            System.out.println("    Gramática:" + (gram - TEgram) + "/"+ gram);
+            System.out.println("    Redação" + (reda - TEreda ) +reda);
             System.out.println(" ");
-            System.out.println(" Geografia:" + geo);
-            System.out.println(" História:" + hist);
-            System.out.println(" Filosofia" + filo);
-            System.out.println(" Sociologia" + socio);
+            System.out.println("    Geografia:" +(geo - TEgeo)+ "/"+ geo);
+            System.out.println("    História:" + (hist - TEhist) + "/"+ hist);
+            System.out.println("    Filosofia" + (filo - TEfilo) + "/"+ filo);
+            System.out.println("    Sociologia" + (socio - TEsocio)+ "/"+ socio);
             System.out.println(" ");
-            System.out.println(" Biologia" + bio);
-            System.out.println(" Química" + quim);
-            System.out.println(" Física" + fis);
-            System.out.println(" Matemática" + mat);
+            System.out.println("    Biologia" + (bio - TEbio)+ "/"+ bio);
+            System.out.println("    Química" + (quim - TEquim)+ "/"+ quim);
+            System.out.println("    Física" + (fis - TEfis)+ "/"+ fis);
+            System.out.println(" ");
+            System.out.println("    Matemática" + (mat - TEmat)+ "/"+ mat);
             System.out.println("  ");
         }
 
     }
-}
+}}
