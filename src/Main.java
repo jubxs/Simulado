@@ -196,7 +196,7 @@ public class Main {
             System.out.println("  Chutou e acertou:" + TAchutou);
             System.out.println("  Ficou em dúvida e acertou:" + TAduvida);
             System.out.println(" ");
-            System.out.println("  Erros em geral: " + (Tqerrada) + "/" + totalQuestoes);
+            System.out.println(" Erros em geral: " + (Tqerrada) + "/" + totalQuestoes);
             System.out.println("  MOTIVO DOS ERROS: ");
             System.out.println("  Não sabia: " + Tnsabia);
             System.out.println("  Chutou e errou: " + Tchutou);
