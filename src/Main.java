@@ -191,52 +191,63 @@ public class Main {
             System.out.println("Acertos em geral: " + (totalQuestoes - Tqerrada) + "/" + totalQuestoes);
         }
         if (criterios[1]) {
-            System.out.println("  Total de acertos por motivo: ");
+            System.out.println("  MOTIVO DOS ACERTOS: ");
             System.out.println("  Sabia:" + TAsabia);
-            System.out.println("  Chutou:" + TAchutou);
-            System.out.println("  Ficou em dúvida:" + TAduvida);
-
-            System.out.println("Erros em geral: " + (Tqerrada) + "/" + totalQuestoes);
-            System.out.println(" Total de erros por motivo ");
-            System.out.println("  Não sabia:" + Tnsabia);
-            System.out.println("  Chutou:" + Tchutou);
-            System.out.println("  Ficou em dúvida:" + Tduvida);
+            System.out.println("  Chutou e acertou:" + TAchutou);
+            System.out.println("  Ficou em dúvida e acertou:" + TAduvida);
+            System.out.println(" ");
+            System.out.println("  Erros em geral: " + (Tqerrada) + "/" + totalQuestoes);
+            System.out.println("  MOTIVO DOS ERROS: ");
+            System.out.println("  Não sabia: " + Tnsabia);
+            System.out.println("  Chutou e errou: " + Tchutou);
+            System.out.println("  Ficou em dúvida e errou: " + Tduvida);
+            System.out.println(" ");
         }
         if (criterios[3] && !criterios[2]) {
             System.out.println("  Questões por área:");
-            System.out.println("   Linguagens: " + (TqLINGUAGENS - TqELINGUAGENS) + "/"+TqLINGUAGENS);
-            System.out.println("   Humanas: " + (TqHUMANAS - TqEHUMANAS) + "/"+TqHUMANAS);
-            System.out.println("   Exatas: " + (TqEXATAS - TqEEXATAS) + "/"+TqEXATAS);
-            System.out.println("   Natureza: " + (TqNATUREZA - TqENATUREZA) + "/"+TqNATUREZA);
+            if (TqLINGUAGENS != 0){System.out.println("   Linguagens: " + (TqLINGUAGENS - TqELINGUAGENS) + "/"+TqLINGUAGENS);}
+            System.out.println(" ");
+            if (TqHUMANAS != 0){System.out.println("   Humanas: " + (TqHUMANAS - TqEHUMANAS) + "/"+TqHUMANAS);}
+            System.out.println(" ");
+            if (TqEXATAS != 0){System.out.println("   Exatas: " + (TqEXATAS - TqEEXATAS) + "/"+TqEXATAS);}
+            System.out.println(" ");
+            if (TqNATUREZA != 0){ System.out.println("   Natureza: " + (TqNATUREZA - TqENATUREZA) + "/"+TqNATUREZA);}
+            System.out.println(" ");
         }
         if (criterios[2] && criterios[3]){
-            System.out.println("   Por matéria:");
-            System.out.println("   Linguagens: " + (TqELINGUAGENS) + "/"+TqLINGUAGENS);
-            System.out.println("     Interpretação:" + (inter - TEinter )+ "/"+inter);
-            System.out.println("     Gramática:" + (gram - TEgram) + "/"+ gram);
-            System.out.println("     Redação" + (reda - TEreda ) +reda);
-            System.out.println("   Humanas: " + (TqHUMANAS - TqEHUMANAS) + "/"+TqHUMANAS);
-            System.out.println("    Geografia:" +(geo - TEgeo)+ "/"+ geo);
-            System.out.println("    História:" + (hist - TEhist) + "/"+ hist);
-            System.out.println("    Filosofia" + (filo - TEfilo) + "/"+ filo);
-            System.out.println("    Sociologia" + (socio - TEsocio)+ "/"+ socio);
-            System.out.println("   Natureza: " + (TqNATUREZA - TqENATUREZA) + "/"+TqNATUREZA);
-            System.out.println("    Biologia" + (bio - TEbio)+ "/"+ bio);
-            System.out.println("    Química" + (quim - TEquim)+ "/"+ quim);
-            System.out.println("    Física" + (fis - TEfis)+ "/"+ fis);
-            System.out.println("   Exatas: " + (TqEXATAS - TqEEXATAS) + "/"+TqEXATAS);
-            System.out.println("    Matemática" + (mat - TEmat)+ "/"+ mat);
-            System.out.println("  ");
+            System.out.println("POR MATÉRIA:");
+            if (TqLINGUAGENS != 0){System.out.println("   Linguagens: " + (TqLINGUAGENS - TqELINGUAGENS) + "/"+TqLINGUAGENS);
+            System.out.println("     Interpretação: " + (inter - TEinter )+ "/"+inter);
+            System.out.println("     Gramática: " + (gram - TEgram) + "/"+ gram);
+            System.out.println("     Redação: " + (reda - TEreda )+ "/" +reda);}
+            System.out.println(" ");
+            if (TqHUMANAS != 0){System.out.println("   Humanas: " + (TqHUMANAS - TqEHUMANAS) + "/"+TqHUMANAS);
+            System.out.println("    Geografia: " +(geo - TEgeo)+ "/"+ geo);
+            System.out.println("    História: " + (hist - TEhist) + "/"+ hist);
+            System.out.println("    Filosofia: " + (filo - TEfilo) + "/"+ filo);
+            System.out.println("    Sociologia: " + (socio - TEsocio)+ "/"+ socio);}
+            System.out.println(" ");
+            if (TqNATUREZA != 0){ System.out.println("   Natureza: " + (TqNATUREZA - TqENATUREZA) + "/"+TqNATUREZA);
+            System.out.println("    Biologia: " + (bio - TEbio)+ "/"+ bio);
+            System.out.println("    Química: " + (quim - TEquim)+ "/"+ quim);
+            System.out.println("    Física: " + (fis - TEfis)+ "/"+ fis);
+                System.out.println(" ");
+            if (TqEXATAS != 0){System.out.println("   Exatas: " + (TqEXATAS - TqEEXATAS) + "/"+TqEXATAS);}
+            System.out.println("    Matemática: " + (mat - TEmat)+ "/"+ mat);
+            System.out.println("  ");}
         }
         if (criterios[2] && !criterios[3]){
             System.out.println("   Por materia:");
+            System.out.println(" ");
             System.out.println("     Interpretação:" + (inter - TEinter )+ "/"+inter);
             System.out.println("     Gramática:" + (gram - TEgram) + "/"+ gram);
-            System.out.println("     Redação" + (reda - TEreda ) +reda);
+            System.out.println("     Redação" + (reda - TEreda )+ "/" +reda);
+            System.out.println(" ");
             System.out.println("     Geografia:" +(geo - TEgeo)+ "/"+ geo);
             System.out.println("     História:" + (hist - TEhist) + "/"+ hist);
             System.out.println("     Filosofia" + (filo - TEfilo) + "/"+ filo);
             System.out.println("     Sociologia" + (socio - TEsocio)+ "/"+ socio);
+            System.out.println(" ");
             System.out.println("    Biologia" + (bio - TEbio)+ "/"+ bio);
             System.out.println("    Química" + (quim - TEquim)+ "/"+ quim);
             System.out.println("    Física" + (fis - TEfis)+ "/"+ fis);
