@@ -228,6 +228,7 @@ public class Main {
                 System.out.println("  ");
             }
 
+
             if (criterio3){
                 System.out.println("   Por matéria:");
                 System.out.println("    Interpretação:" + (inter - TEinter )+ "/"+inter);
